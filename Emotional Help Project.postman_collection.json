@@ -262,6 +262,216 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Search User Without Filter and Sorting",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\": [],\r\n    \"sorts\": [],\r\n    \"page\": null,\r\n    \"size\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter users by firstName and sort by age",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\": [\r\n        {\r\n            \"key\": \"firstName\",\r\n            \"operator\": \"EQUAL\",\r\n            \"field_type\": \"STRING\",\r\n            \"value\": \"Kate\"\r\n        }\r\n    ],\r\n    \"sorts\": [\r\n        {\r\n            \"key\": \"age\",\r\n            \"direction\": \"ASC\"\r\n        }\r\n    ],\r\n    \"page\": null,\r\n    \"size\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter user's lastName not equal to ...",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\": [\r\n        {\r\n            \"key\": \"lastName\",\r\n            \"operator\": \"NOT_EQUAL\",\r\n            \"field_type\": \"STRING\",\r\n            \"value\": \"Johnson\"\r\n        }\r\n    ],\r\n    \"sorts\": [\r\n        {\r\n            \"key\": \"gender\",\r\n            \"direction\": \"ASC\"\r\n        }\r\n    ],\r\n    \"page\": null,\r\n    \"size\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter email not equal to ... and size 1 response",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\": [\r\n        {\r\n            \"key\": \"email\",\r\n            \"operator\": \"NOT_EQUAL\",\r\n            \"field_type\": \"STRING\",\r\n            \"value\": \"test3@email\"\r\n        }\r\n    ],\r\n    \"sorts\": [\r\n        {\r\n            \"key\": \"age\",\r\n            \"direction\": \"ASC\"\r\n        }\r\n    ],\r\n    \"page\": null,\r\n    \"size\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter lastName like and sort by age DESC",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\": [\r\n        {\r\n            \"key\": \"lastName\",\r\n            \"operator\": \"LIKE\",\r\n            \"field_type\": \"STRING\",\r\n            \"value\": \"Smi\"\r\n        }\r\n    ],\r\n    \"sorts\": [\r\n        {\r\n            \"key\": \"age\",\r\n            \"direction\": \"DESC\"\r\n        }\r\n    ],\r\n    \"page\": null,\r\n    \"size\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter lastName IN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\": [\r\n        {\r\n            \"key\": \"lastName\",\r\n            \"operator\": \"IN\",\r\n            \"field_type\": \"STRING\",\r\n            \"values\": [\"Johnson\", \"Smith\"]\r\n        }\r\n    ],\r\n    \"sorts\": [],\r\n    \"page\": null,\r\n    \"size\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter age",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\": [\r\n        {\r\n            \"key\": \"age\",\r\n            \"operator\": \"BETWEEN\",\r\n            \"field_type\": \"INTEGER\",\r\n            \"value\": 20,\r\n            \"value_to\": 30\r\n        }\r\n    ],\r\n    \"sorts\": [],\r\n    \"page\": null,\r\n    \"size\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"search"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
