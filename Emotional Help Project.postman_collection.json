@@ -67,7 +67,7 @@
 			"response": []
 		},
 		{
-			"name": "get all users",
+			"name": "Get all users",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -97,6 +97,167 @@
 					"path": [
 						"api",
 						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finalize user's answers (finish test)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"testId\": 1,\r\n    \"questionAnswerUserRequests\": [\r\n        {\r\n            \"questionId\": \"1\",\r\n            \"answerIds\": [\r\n                2\r\n            ]\r\n        },\r\n        {\r\n            \"questionId\": \"2\",\r\n            \"answerIds\": [\r\n                4\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tests/test/session/1/finalize",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tests",
+						"test",
+						"session",
+						"1",
+						"finalize"
+					]
+				},
+				"description": "User starts a new test"
+			},
+			"response": []
+		},
+		{
+			"name": "Get test limited by questions number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tests/test/1/session/1?skip=0&take=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tests",
+						"test",
+						"1",
+						"session",
+						"1"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "take",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit user's answers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"testId\": 1,\r\n    \"questionAnswerUserRequests\": [\r\n        {\r\n            \"questionId\": \"1\",\r\n            \"answerIds\": [\r\n                2\r\n            ]\r\n        },\r\n        {\r\n            \"questionId\": \"2\",\r\n            \"answerIds\": [\r\n                4\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tests/test/session/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tests",
+						"test",
+						"session",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start a new test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tests/test/1/init?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tests",
+						"test",
+						"1",
+						"init"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get tests page by user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tests/user/1?skip=0&take=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tests",
+						"user",
+						"1"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "take",
+							"value": "10"
+						}
 					]
 				}
 			},
