@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "f81fe2a1-c425-4e61-b14f-8c77d00699dc",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/tests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/tests",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tests"
+					]
+				},
+				"description": "GETall for test "
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/tests",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Test3 for mental\",\n\t\"testType\":{\n\t\t\"id\":\"1\",\n\t\t\"title\":\"Mental changed\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/tests",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tests"
+					]
+				},
+				"description": "Post request for test "
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/tests",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 1,\n        \"title\": \"Test1 for mental\",\n        \"testType\": {\n        \t\"id\":\"1\",\n        \t\"title\":\"Mental changed\"\n        }\n    }"
+				},
+				"url": {
+					"raw": "localhost:8080/api/tests",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tests"
+					]
+				},
+				"description": "PUT(Update ) for test entity"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/tests/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/tests/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tests",
+						"2"
+					]
+				},
+				"description": "Delete byid for test entity\n"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/tests/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/tests/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tests",
+						"1"
+					]
+				},
+				"description": "GetById for test entity\n"
+			},
+			"response": []
+		}
+	]
+}
