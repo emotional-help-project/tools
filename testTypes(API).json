@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "3b651246-58e3-4e08-b8c1-09547a5b66e8",
+		"name": "Emotinal_help",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/testTypes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"title\":\"Health\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/testTypes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"testTypes"
+					]
+				},
+				"description": "GETALL for Test type \n"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/testTypes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"title\":\"Health\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/testTypes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"testTypes"
+					]
+				},
+				"description": "Post request for testTpye "
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/testTypes",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"title\": \"Mental changed\"\n  }"
+				},
+				"url": {
+					"raw": "localhost:8080/api/testTypes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"testTypes"
+					]
+				},
+				"description": "PUT(Update) request for testypes "
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/testTypes/2",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"title\":\"Other\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/testTypes/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"testTypes",
+						"2"
+					]
+				},
+				"description": "Delete request for testtypes"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/testTypes/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/testTypes/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"testTypes",
+						"1"
+					]
+				},
+				"description": "GEtById rquest for TestTypes\n"
+			},
+			"response": []
+		}
+	]
+}
