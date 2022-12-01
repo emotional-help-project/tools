@@ -549,7 +549,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/tests/user/1/map/1",
+					"raw": "http://localhost:8080/api/user/profile/1/map/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -557,8 +557,8 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"tests",
 						"user",
+						"profile",
 						"1",
 						"map",
 						"1"
@@ -664,6 +664,60 @@
 							"key": "pageSize",
 							"value": "10"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user profile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"firstName\": \"Kate\",\r\n    \"lastName\": \"Brown\",\r\n    \"email\": \"brown@email.com\",\r\n    \"newPassword\": \"Aaaa123!\",\r\n    \"gender\": \"FEMALE\",\r\n    \"age\": 32\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/profile/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"profile",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user emotion statistics (all tests)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/profile/1/statistics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"profile",
+						"1",
+						"statistics"
 					]
 				}
 			},
