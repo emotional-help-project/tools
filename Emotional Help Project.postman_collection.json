@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"firstName\": \"Ron\",\r\n    \"lastName\": \"Smith\",\r\n    \"email\": \"test3@email\",\r\n    \"password\": \"pass123\",\r\n    \"gender\": \"MALE\",\r\n    \"age\": 25\r\n}",
+					"raw": "{\r\n    \"firstName\": \"Ron\",\r\n    \"lastName\": \"Smith\",\r\n    \"email\": \"test3@email\",\r\n    \"password\": \"Pass123!\",\r\n    \"gender\": \"MALE\",\r\n    \"age\": 25\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -34,7 +34,100 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Register user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"David\",\r\n    \"lastName\": \"Spoke\",\r\n    \"email\": \"spoke@email\",\r\n    \"password\": \"passW123!\",\r\n    \"gender\": \"MALE\",\r\n    \"age\": 22\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/account/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"account",
+								"signup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 20:16:26 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 6,\n    \"firstName\": \"David\",\n    \"lastName\": \"Spoke\",\n    \"email\": \"spoke@email\",\n    \"gender\": \"MALE\",\n    \"age\": 22,\n    \"role\": \"USER\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Sign in",
@@ -64,7 +157,100 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Sign in",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test3@email\",\r\n    \"password\": \"pass123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/account/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"account",
+								"signin"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 20:17:39 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlVTRVIiXSwiaWQiOiIyIiwiZXhwIjoxNjY5OTMxODU5LCJpYXQiOjE2Njk5MjU4NTksInVzZXJuYW1lIjoidGVzdDNAZW1haWwifQ.GchpmjqP7btAFEgVWr9wB92Ich99TEBoO3MjJmMRO2z3-MjPvRfyOnbWtWfk9WCI5s_c7BINa75-9XUS3zhRGg\",\n    \"userId\": 2,\n    \"firstName\": \"Ron\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Get all users",
@@ -100,7 +286,96 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Get all users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlVTRVIiXSwiaWQiOiIxIiwiZXhwIjoxNjY5MTg5MTAzLCJpYXQiOjE2NjkxODMxMDMsInVzZXJuYW1lIjoidGVzdDNAZW1haWwifQ.K74eWQ5qn6yVtozjUtUfP29M6MJrBZQGpe3XW0yGSG7vHSEKvflOLzYE-0VjaWNJyKnYHg3cWjvJT14HWulTJQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 20:14:54 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"Ron\",\n        \"lastName\": \"Smith\",\n        \"email\": \"test@email\",\n        \"gender\": \"MALE\",\n        \"age\": 25,\n        \"role\": \"USER\"\n    },\n    {\n        \"id\": 2,\n        \"firstName\": \"Ron\",\n        \"lastName\": \"Smith\",\n        \"email\": \"test3@email\",\n        \"gender\": \"MALE\",\n        \"age\": 25,\n        \"role\": \"USER\"\n    },\n    {\n        \"id\": 5,\n        \"firstName\": \"Bob\",\n        \"lastName\": \"Ford\",\n        \"email\": \"bob3@email\",\n        \"gender\": \"MALE\",\n        \"age\": 25,\n        \"role\": \"USER\"\n    },\n    {\n        \"id\": 3,\n        \"firstName\": \"Kate\",\n        \"lastName\": \"Brown\",\n        \"email\": \"brown@email.com\",\n        \"gender\": \"FEMALE\",\n        \"age\": 32,\n        \"role\": \"USER\"\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Finalize user's answers (finish test)",
@@ -134,7 +409,103 @@
 				},
 				"description": "User starts a new test"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Finalize user's answers (finish test)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"testId\": 1,\r\n    \"questionAnswerUserRequests\": [\r\n        {\r\n            \"questionId\": \"1\",\r\n            \"answerIds\": [\r\n                2\r\n            ]\r\n        },\r\n        {\r\n            \"questionId\": \"2\",\r\n            \"answerIds\": [\r\n                4\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tests/test/session/6/finalize",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tests",
+								"test",
+								"session",
+								"6",
+								"finalize"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 19:40:48 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"adviceDescription\": \"According to your responses, you seem to show some symptoms of Bipolar Depression.\",\n    \"scoreFrom\": 0,\n    \"scoreTo\": 70,\n    \"userScore\": 5,\n    \"links\": [\n        {\n            \"id\": 1,\n            \"title\": \"Depression Program\",\n            \"link\": \"https://thiswayup.org.au/programs/depression-program/\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Overcoming depression: How psychologists help with depressive disorders\",\n            \"link\": \"https://www.apa.org/topics/depression/overcoming\"\n        }\n    ]\n}"
+				}
+			]
 		},
 		{
 			"name": "Get test limited by questions number",
@@ -168,7 +539,104 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Get test limited by questions number",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tests/test/1/session/6?skip=0&take=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tests",
+								"test",
+								"1",
+								"session",
+								"6"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "take",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 19:31:58 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"totalNumberOfTestQuestions\": 2,\n    \"items\": [\n        {\n            \"questionId\": 1,\n            \"allowsMultipleAnswers\": false,\n            \"questionText\": \"Do you suffer from extreme mood changes (e.g. going from extremely \\\"happy\\\" to extremely \\\"sad\\\")?\",\n            \"answers\": [\n                {\n                    \"answerId\": 1,\n                    \"answerText\": \"Yes\",\n                    \"checked\": false\n                },\n                {\n                    \"answerId\": 2,\n                    \"answerText\": \"Sometimes\",\n                    \"checked\": false\n                },\n                {\n                    \"answerId\": 3,\n                    \"answerText\": \"No\",\n                    \"checked\": false\n                }\n            ]\n        },\n        {\n            \"questionId\": 2,\n            \"allowsMultipleAnswers\": false,\n            \"questionText\": \"Has anyone in your family ever been diagnosed with Bipolar Disorder?\",\n            \"answers\": [\n                {\n                    \"answerId\": 4,\n                    \"answerText\": \"Yes\",\n                    \"checked\": false\n                },\n                {\n                    \"answerId\": 5,\n                    \"answerText\": \"Sometimes\",\n                    \"checked\": false\n                },\n                {\n                    \"answerId\": 6,\n                    \"answerText\": \"No\",\n                    \"checked\": false\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
 		},
 		{
 			"name": "Submit user's answers",
@@ -200,7 +668,94 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Submit user's answers",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"testId\": 1,\r\n    \"questionAnswerUserRequests\": [\r\n        {\r\n            \"questionId\": \"1\",\r\n            \"answerIds\": [\r\n                2\r\n            ]\r\n        },\r\n        {\r\n            \"questionId\": \"2\",\r\n            \"answerIds\": [\r\n                4\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tests/test/session/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tests",
+								"test",
+								"session",
+								"5"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 19:40:16 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
 		},
 		{
 			"name": "Start a new test",
@@ -229,7 +784,99 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Start a new test",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tests/test/1/init?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tests",
+								"test",
+								"1",
+								"init"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 19:31:44 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "6"
+				}
+			]
 		},
 		{
 			"name": "Get tests page by user",
@@ -261,7 +908,102 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Get tests page by user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tests/user/2?skip=0&take=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tests",
+								"user",
+								"2"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "take",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 19:41:28 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"incompleteTests\": [],\n    \"tests\": {\n        \"content\": [\n            {\n                \"id\": 1,\n                \"title\": \"Depression test\",\n                \"testType\": {\n                    \"id\": 1,\n                    \"title\": \"Health\"\n                }\n            }\n        ],\n        \"pageable\": {\n            \"sort\": {\n                \"empty\": false,\n                \"sorted\": true,\n                \"unsorted\": false\n            },\n            \"offset\": 0,\n            \"pageNumber\": 0,\n            \"pageSize\": 10,\n            \"paged\": true,\n            \"unpaged\": false\n        },\n        \"last\": true,\n        \"totalElements\": 1,\n        \"totalPages\": 1,\n        \"size\": 10,\n        \"number\": 0,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"first\": true,\n        \"numberOfElements\": 1,\n        \"empty\": false\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Search User Without Filter and Sorting",
@@ -291,7 +1033,100 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Search User Without Filter and Sorting",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filters\": [],\r\n    \"sorts\": [],\r\n    \"page\": null,\r\n    \"size\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"search"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 19:49:14 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"firstName\": \"Ron\",\n            \"lastName\": \"Smith\",\n            \"email\": \"test@email\",\n            \"gender\": \"MALE\",\n            \"age\": 25,\n            \"role\": \"USER\"\n        },\n        {\n            \"id\": 2,\n            \"firstName\": \"Ron\",\n            \"lastName\": \"Smith\",\n            \"email\": \"test3@email\",\n            \"gender\": \"MALE\",\n            \"age\": 25,\n            \"role\": \"USER\"\n        },\n        {\n            \"id\": 5,\n            \"firstName\": \"Bob\",\n            \"lastName\": \"Ford\",\n            \"email\": \"bob3@email\",\n            \"gender\": \"MALE\",\n            \"age\": 25,\n            \"role\": \"USER\"\n        },\n        {\n            \"id\": 3,\n            \"firstName\": \"Kate\",\n            \"lastName\": \"Brown\",\n            \"email\": \"brown@email.com\",\n            \"gender\": \"FEMALE\",\n            \"age\": 32,\n            \"role\": \"USER\"\n        }\n    ],\n    \"pageable\": {\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"pageNumber\": 0,\n        \"pageSize\": 100,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalPages\": 1,\n    \"totalElements\": 4,\n    \"size\": 100,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"first\": true,\n    \"numberOfElements\": 4,\n    \"empty\": false\n}"
+				}
+			]
 		},
 		{
 			"name": "Filter users by firstName and sort by age",
@@ -441,7 +1276,100 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Filter lastName IN",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filters\": [\r\n        {\r\n            \"key\": \"lastName\",\r\n            \"operator\": \"IN\",\r\n            \"field_type\": \"STRING\",\r\n            \"values\": [\"Johnson\", \"Smith\"]\r\n        }\r\n    ],\r\n    \"sorts\": [],\r\n    \"page\": null,\r\n    \"size\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"search"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 19:49:53 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"firstName\": \"Ron\",\n            \"lastName\": \"Smith\",\n            \"email\": \"test@email\",\n            \"gender\": \"MALE\",\n            \"age\": 25,\n            \"role\": \"USER\"\n        },\n        {\n            \"id\": 2,\n            \"firstName\": \"Ron\",\n            \"lastName\": \"Smith\",\n            \"email\": \"test3@email\",\n            \"gender\": \"MALE\",\n            \"age\": 25,\n            \"role\": \"USER\"\n        }\n    ],\n    \"pageable\": {\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"pageNumber\": 0,\n        \"pageSize\": 100,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalPages\": 1,\n    \"totalElements\": 2,\n    \"size\": 100,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"first\": true,\n    \"numberOfElements\": 2,\n    \"empty\": false\n}"
+				}
+			]
 		},
 		{
 			"name": "Filter age",
@@ -491,7 +1419,90 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Get courses",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 20:14:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Managing Emotions in Times of Uncertainty & Stress\",\n        \"description\": \"Developed by the Yale Center for Emotional Intelligence, Managing Emotions in Times of Uncertainty & Stress will provide participants with the knowledge, skills, and strategies to understand and manage their emotions and those of their students. The 10-hour online course is designed for school staff, including teachers, paraprofessionals, counselors, principals, and non-teaching staff in preK-12 schools.\",\n        \"dateCreated\": \"2022-11-29  11:59:26\",\n        \"price\": 300,\n        \"imageUrl\": \"some/url/here\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Managing Emotions in Times of Uncertainty & Stress\",\n        \"description\": \"Developed by the Yale Center for Emotional Intelligence, Managing Emotions in Times of Uncertainty & Stress will provide participants with the knowledge, skills, and strategies to understand and manage their emotions and those of their students. The 10-hour online course is designed for school staff, including teachers, paraprofessionals, counselors, principals, and non-teaching staff in preK-12 schools.\",\n        \"dateCreated\": \"2022-11-29  12:00:10\",\n        \"price\": 300,\n        \"imageUrl\": \"some/url/here\"\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Create course",
@@ -541,7 +1552,91 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Get course by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/courses/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"courses",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 20:14:28 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"Managing Emotions in Times of Uncertainty & Stress\",\n    \"description\": \"Developed by the Yale Center for Emotional Intelligence, Managing Emotions in Times of Uncertainty & Stress will provide participants with the knowledge, skills, and strategies to understand and manage their emotions and those of their students. The 10-hour online course is designed for school staff, including teachers, paraprofessionals, counselors, principals, and non-teaching staff in preK-12 schools.\",\n    \"dateCreated\": \"2022-11-29  11:59:26\",\n    \"price\": 300,\n    \"imageUrl\": \"some/url/here\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Get emotion map by test",
@@ -565,7 +1660,94 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Get emotion map by test",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/profile/1/map/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"1",
+								"map",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 20:11:46 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"testResultStatistics\": [\n        {\n            \"testDateTime\": \"2022-11-29T17:08:12.510998\",\n            \"result\": 5\n        },\n        {\n            \"testDateTime\": \"2022-11-30T20:52:26.035909\",\n            \"result\": 9\n        },\n        {\n            \"testDateTime\": \"2022-11-30T21:12:20.382465\",\n            \"result\": 3\n        },\n        {\n            \"testDateTime\": \"2022-12-01T21:40:48.64253\",\n            \"result\": 5\n        }\n    ]\n}"
+				}
+			]
 		},
 		{
 			"name": "Get user by ID",
@@ -586,7 +1768,91 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Get user by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 19:50:35 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"firstName\": \"Ron\",\n    \"lastName\": \"Smith\",\n    \"email\": \"test@email\",\n    \"gender\": \"MALE\",\n    \"age\": 25,\n    \"role\": \"USER\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Update user",
@@ -615,7 +1881,99 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Update user",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"firstName\": \"Bob\",\r\n    \"lastName\": \"Ford\",\r\n    \"email\": \"bob3@email\",\r\n    \"gender\": \"MALE\",\r\n    \"age\": 25,\r\n    \"role\": \"USER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 20:13:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"firstName\": \"Bob\",\n    \"lastName\": \"Ford\",\n    \"email\": \"bob3@email\",\n    \"gender\": \"MALE\",\n    \"age\": 25,\n    \"role\": \"USER\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Delete user by id",
@@ -636,7 +1994,83 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Delete user by id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"4"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 19:51:16 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
 		},
 		{
 			"name": "Get all users paginated",
@@ -667,7 +2101,101 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Get all users paginated",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users/page?pageNum=1&pageSize=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"page"
+							],
+							"query": [
+								{
+									"key": "pageNum",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 20:06:37 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": [\n        {\n            \"id\": 5,\n            \"firstName\": \"Bob\",\n            \"lastName\": \"Ford\",\n            \"email\": \"bob3@email\",\n            \"gender\": \"MALE\",\n            \"age\": 25,\n            \"role\": \"USER\"\n        },\n        {\n            \"id\": 3,\n            \"firstName\": \"Kate\",\n            \"lastName\": \"Brown\",\n            \"email\": \"brown@email.com\",\n            \"gender\": \"FEMALE\",\n            \"age\": 32,\n            \"role\": \"USER\"\n        },\n        {\n            \"id\": 2,\n            \"firstName\": \"Ron\",\n            \"lastName\": \"Smith\",\n            \"email\": \"test3@email\",\n            \"gender\": \"MALE\",\n            \"age\": 25,\n            \"role\": \"USER\"\n        },\n        {\n            \"id\": 1,\n            \"firstName\": \"Ron\",\n            \"lastName\": \"Smith\",\n            \"email\": \"test@email\",\n            \"gender\": \"MALE\",\n            \"age\": 25,\n            \"role\": \"USER\"\n        }\n    ],\n    \"pageable\": {\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalPages\": 1,\n    \"totalElements\": 4,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"first\": true,\n    \"numberOfElements\": 4,\n    \"empty\": false\n}"
+				}
+			]
 		},
 		{
 			"name": "Update user profile",
@@ -698,7 +2226,101 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Update user profile",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"firstName\": \"Kate\",\r\n    \"lastName\": \"Brown\",\r\n    \"email\": \"brown@email.com\",\r\n    \"newPassword\": \"Aaaa123!\",\r\n    \"gender\": \"FEMALE\",\r\n    \"age\": 32\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/profile/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 20:11:21 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"firstName\": \"Kate\",\n    \"lastName\": \"Brown\",\n    \"email\": \"brown@email.com\",\n    \"gender\": \"FEMALE\",\n    \"age\": 32,\n    \"role\": \"USER\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Get user emotion statistics (all tests)",
@@ -721,7 +2343,93 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Response Get user emotion statistics (all tests)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/profile/1/statistics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"1",
+								"statistics"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 01 Dec 2022 20:10:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"emotionStatistics\": [\n        {\n            \"testTitle\": \"Depression test\",\n            \"testTypeTitle\": \"Health\",\n            \"dateTime\": \"2022-11-29T17:08:12.510998\",\n            \"result\": 5,\n            \"adviceDescription\": \"According to your responses, you seem to show some symptoms of Bipolar Depression.\",\n            \"links\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"Depression Program\",\n                    \"link\": \"https://thiswayup.org.au/programs/depression-program/\"\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"Overcoming depression: How psychologists help with depressive disorders\",\n                    \"link\": \"https://www.apa.org/topics/depression/overcoming\"\n                }\n            ]\n        },\n        {\n            \"testTitle\": \"Depression test\",\n            \"testTypeTitle\": \"Health\",\n            \"dateTime\": \"2022-11-30T20:52:26.035909\",\n            \"result\": 9,\n            \"adviceDescription\": \"According to your responses, you seem to show some symptoms of Bipolar Depression.\",\n            \"links\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"Depression Program\",\n                    \"link\": \"https://thiswayup.org.au/programs/depression-program/\"\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"Overcoming depression: How psychologists help with depressive disorders\",\n                    \"link\": \"https://www.apa.org/topics/depression/overcoming\"\n                }\n            ]\n        },\n        {\n            \"testTitle\": \"Depression test\",\n            \"testTypeTitle\": \"Health\",\n            \"dateTime\": \"2022-11-30T21:12:20.382465\",\n            \"result\": 3,\n            \"adviceDescription\": \"According to your responses, you seem to show some symptoms of Bipolar Depression.\",\n            \"links\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"Depression Program\",\n                    \"link\": \"https://thiswayup.org.au/programs/depression-program/\"\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"Overcoming depression: How psychologists help with depressive disorders\",\n                    \"link\": \"https://www.apa.org/topics/depression/overcoming\"\n                }\n            ]\n        },\n        {\n            \"testTitle\": \"Depression test\",\n            \"testTypeTitle\": \"Health\",\n            \"dateTime\": \"2022-12-01T21:40:48.64253\",\n            \"result\": 5,\n            \"adviceDescription\": \"According to your responses, you seem to show some symptoms of Bipolar Depression.\",\n            \"links\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"Depression Program\",\n                    \"link\": \"https://thiswayup.org.au/programs/depression-program/\"\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"Overcoming depression: How psychologists help with depressive disorders\",\n                    \"link\": \"https://www.apa.org/topics/depression/overcoming\"\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
 		}
 	]
 }
