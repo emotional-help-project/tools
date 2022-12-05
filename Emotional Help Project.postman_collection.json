@@ -136,7 +136,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"test3@email\",\r\n    \"password\": \"pass123\"\r\n}",
+					"raw": "{\r\n    \"email\": \"test3@email\",\r\n    \"password\": \"Pass123!\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -546,7 +546,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/tests/test/1/session/6?skip=0&take=10",
+							"raw": "http://localhost:8080/api/tests/test/1/session/1?skip=0&take=10",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -558,7 +558,7 @@
 								"test",
 								"1",
 								"session",
-								"6"
+								"1"
 							],
 							"query": [
 								{
@@ -622,7 +622,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Thu, 01 Dec 2022 19:31:58 GMT"
+							"value": "Mon, 05 Dec 2022 18:25:33 GMT"
 						},
 						{
 							"key": "Keep-Alive",
@@ -634,7 +634,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"totalNumberOfTestQuestions\": 2,\n    \"items\": [\n        {\n            \"questionId\": 1,\n            \"allowsMultipleAnswers\": false,\n            \"questionText\": \"Do you suffer from extreme mood changes (e.g. going from extremely \\\"happy\\\" to extremely \\\"sad\\\")?\",\n            \"answers\": [\n                {\n                    \"answerId\": 1,\n                    \"answerText\": \"Yes\",\n                    \"checked\": false\n                },\n                {\n                    \"answerId\": 2,\n                    \"answerText\": \"Sometimes\",\n                    \"checked\": false\n                },\n                {\n                    \"answerId\": 3,\n                    \"answerText\": \"No\",\n                    \"checked\": false\n                }\n            ]\n        },\n        {\n            \"questionId\": 2,\n            \"allowsMultipleAnswers\": false,\n            \"questionText\": \"Has anyone in your family ever been diagnosed with Bipolar Disorder?\",\n            \"answers\": [\n                {\n                    \"answerId\": 4,\n                    \"answerText\": \"Yes\",\n                    \"checked\": false\n                },\n                {\n                    \"answerId\": 5,\n                    \"answerText\": \"Sometimes\",\n                    \"checked\": false\n                },\n                {\n                    \"answerId\": 6,\n                    \"answerText\": \"No\",\n                    \"checked\": false\n                }\n            ]\n        }\n    ]\n}"
+					"body": "{\n    \"testTitle\": \"Depression test\",\n    \"totalNumberOfTestQuestions\": 2,\n    \"items\": [\n        {\n            \"questionId\": 1,\n            \"allowsMultipleAnswers\": false,\n            \"questionText\": \"Do you suffer from extreme mood changes (e.g. going from extremely \\\"happy\\\" to extremely \\\"sad\\\")?\",\n            \"answers\": [\n                {\n                    \"answerId\": 1,\n                    \"answerText\": \"Yes\",\n                    \"checked\": false\n                },\n                {\n                    \"answerId\": 2,\n                    \"answerText\": \"Sometimes\",\n                    \"checked\": false\n                },\n                {\n                    \"answerId\": 3,\n                    \"answerText\": \"No\",\n                    \"checked\": false\n                }\n            ]\n        },\n        {\n            \"questionId\": 2,\n            \"allowsMultipleAnswers\": false,\n            \"questionText\": \"Has anyone in your family ever been diagnosed with Bipolar Disorder?\",\n            \"answers\": [\n                {\n                    \"answerId\": 4,\n                    \"answerText\": \"Yes\",\n                    \"checked\": false\n                },\n                {\n                    \"answerId\": 5,\n                    \"answerText\": \"Sometimes\",\n                    \"checked\": false\n                },\n                {\n                    \"answerId\": 6,\n                    \"answerText\": \"No\",\n                    \"checked\": false\n                }\n            ]\n        }\n    ]\n}"
 				}
 			]
 		},
@@ -1733,7 +1733,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Thu, 01 Dec 2022 20:11:46 GMT"
+							"value": "Mon, 05 Dec 2022 18:31:47 GMT"
 						},
 						{
 							"key": "Keep-Alive",
@@ -1745,7 +1745,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"testResultStatistics\": [\n        {\n            \"testDateTime\": \"2022-11-29T17:08:12.510998\",\n            \"result\": 5\n        },\n        {\n            \"testDateTime\": \"2022-11-30T20:52:26.035909\",\n            \"result\": 9\n        },\n        {\n            \"testDateTime\": \"2022-11-30T21:12:20.382465\",\n            \"result\": 3\n        },\n        {\n            \"testDateTime\": \"2022-12-01T21:40:48.64253\",\n            \"result\": 5\n        }\n    ]\n}"
+					"body": "{\n    \"testTitle\": \"Depression test\",\n    \"testResultStatistics\": []\n}"
 				}
 			]
 		},
@@ -2428,6 +2428,246 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"emotionStatistics\": [\n        {\n            \"testTitle\": \"Depression test\",\n            \"testTypeTitle\": \"Health\",\n            \"dateTime\": \"2022-11-29T17:08:12.510998\",\n            \"result\": 5,\n            \"adviceDescription\": \"According to your responses, you seem to show some symptoms of Bipolar Depression.\",\n            \"links\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"Depression Program\",\n                    \"link\": \"https://thiswayup.org.au/programs/depression-program/\"\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"Overcoming depression: How psychologists help with depressive disorders\",\n                    \"link\": \"https://www.apa.org/topics/depression/overcoming\"\n                }\n            ]\n        },\n        {\n            \"testTitle\": \"Depression test\",\n            \"testTypeTitle\": \"Health\",\n            \"dateTime\": \"2022-11-30T20:52:26.035909\",\n            \"result\": 9,\n            \"adviceDescription\": \"According to your responses, you seem to show some symptoms of Bipolar Depression.\",\n            \"links\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"Depression Program\",\n                    \"link\": \"https://thiswayup.org.au/programs/depression-program/\"\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"Overcoming depression: How psychologists help with depressive disorders\",\n                    \"link\": \"https://www.apa.org/topics/depression/overcoming\"\n                }\n            ]\n        },\n        {\n            \"testTitle\": \"Depression test\",\n            \"testTypeTitle\": \"Health\",\n            \"dateTime\": \"2022-11-30T21:12:20.382465\",\n            \"result\": 3,\n            \"adviceDescription\": \"According to your responses, you seem to show some symptoms of Bipolar Depression.\",\n            \"links\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"Depression Program\",\n                    \"link\": \"https://thiswayup.org.au/programs/depression-program/\"\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"Overcoming depression: How psychologists help with depressive disorders\",\n                    \"link\": \"https://www.apa.org/topics/depression/overcoming\"\n                }\n            ]\n        },\n        {\n            \"testTitle\": \"Depression test\",\n            \"testTypeTitle\": \"Health\",\n            \"dateTime\": \"2022-12-01T21:40:48.64253\",\n            \"result\": 5,\n            \"adviceDescription\": \"According to your responses, you seem to show some symptoms of Bipolar Depression.\",\n            \"links\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"Depression Program\",\n                    \"link\": \"https://thiswayup.org.au/programs/depression-program/\"\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"Overcoming depression: How psychologists help with depressive disorders\",\n                    \"link\": \"https://www.apa.org/topics/depression/overcoming\"\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Submit claim for appointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"psychologistId\": 1,\r\n    \"desiredDate\": \"2022-12-27\",\r\n    \"userPhone\": \"(095) 722-89-02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/appointments/appoint",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"appointments",
+						"appoint"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response Submit claim for appointment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"psychologistId\": 1,\r\n    \"desiredDate\": \"2022-12-27\",\r\n    \"userPhone\": \"(095) 722-89-02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/appointments/appoint",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"appointments",
+								"appoint"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Dec 2022 17:48:44 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"psychologistId\": 1,\n    \"desiredDate\": \"2022-12-27\",\n    \"userPhone\": \"(095) 722-89-02\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all psychologists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/psychologists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"psychologists"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response Get all psychologists",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/psychologists",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"psychologists"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Dec 2022 18:15:43 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"ROBERT\",\n        \"lastName\": \"Trivers\",\n        \"email\": \"trivers@email.com\",\n        \"gender\": \"MALE\",\n        \"age\": 79,\n        \"education\": \"Harvard University\",\n        \"license\": \"AFK096548\",\n        \"qualification\": \"PhD\"\n    }\n]"
 				}
 			]
 		}
