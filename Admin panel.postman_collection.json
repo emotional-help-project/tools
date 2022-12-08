@@ -122,7 +122,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"title\":\"Test3 for mental\",\n\t\"testType\":{\n\t\t\"id\":\"1\",\n\t\t\"title\":\"Mental changed\"\n\t},\n    \"description\": \"Some details for new test\",\n    \"imageUrl\": \"http/url/here\"\n}"
+					"raw": "{\n\t\"title\":\"Test3 for mental\",\n\t\"testType\":{\n\t\t\"id\":\"1\",\n\t\t\"title\":\"Health\"\n\t},\n    \"description\": \"Some details for new test\",\n    \"imageUrl\": \"http/url/here\"\n}"
 				},
 				"url": {
 					"raw": "localhost:8080/api/tests",
