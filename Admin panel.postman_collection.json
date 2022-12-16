@@ -9,10 +9,21 @@
 		{
 			"name": "Get all tests",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlVTRVIiXSwiaWQiOjIsImV4cCI6MTY3MTE4NzY4NiwiaWF0IjoxNjcxMTAxMjg2LCJ1c2VybmFtZSI6InNvZmlpYS5wcnlkYXRrb0BnbWFpbC5jb20ifQ.XaqswzE0u2qWRuI0-1xCDPTgmRXk9qd-fH821jGdQaCOCAMwQwbFEVOUX3DlyjIlAqaLFReAVAyyxskSAWSuBQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/tests",
+					"raw": "http://localhost:8080/api/tests",
+					"protocol": "http",
 					"host": [
 						"localhost"
 					],
@@ -111,6 +122,16 @@
 		{
 			"name": "Create new test",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIkFETUlOIl0sImV4cCI6MTY3MDk5ODUxNiwiaWF0IjoxNjcwOTEyMTE2LCJ1c2VybmFtZSI6ImRqYXZpc3RkZXZAbWFpbC5ydSJ9.2nlAAgsvHkO-w4Uj8_i2I8YuawhuUHcE0otBX6j1-wqG2c9BhdTg_6ZOxRVD0mZCAWrBnIzlzQlo1sblfvG-AQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -682,6 +703,16 @@
 		{
 			"name": "Crete TestType",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkamF2aXN0ZGV2QG1haWwucnUiLCJyb2xlIjpbIkFETUlOIl0sImlkIjoxLCJleHAiOjE2NzE3MTQ4MDksImlhdCI6MTY3MTExMDAwOSwidXNlcm5hbWUiOiJkamF2aXN0ZGV2QG1haWwucnUifQ.qYPiJvladDg5sh_s260VWK8WDZFpmIC7niD4nEmbRC41BurQ-pWEnlZQPnndCHzYbyqPu70ROGN6ziOMQE4J8w",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -1273,11 +1304,21 @@
 		{
 			"name": "Create link",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkamF2aXN0ZGV2QG1haWwucnUiLCJyb2xlIjpbIkFETUlOIl0sImlkIjoxLCJleHAiOjE2NzE3MTQ4MDksImlhdCI6MTY3MTExMDAwOSwidXNlcm5hbWUiOiJkamF2aXN0ZGV2QG1haWwucnUifQ.qYPiJvladDg5sh_s260VWK8WDZFpmIC7niD4nEmbRC41BurQ-pWEnlZQPnndCHzYbyqPu70ROGN6ziOMQE4J8w",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"A Beautiful Mind\",\r\n    \"link\": \"https://www.youtube.com/watch?v=9wZM7CQY130\",\r\n    \"linkCategory\": \"MOVIE\"\r\n}",
+					"raw": "{\r\n    \"title\": \"Treatment Program for Depression\",\r\n    \"link\": \"https://thiswayup.org.au/programs/depression-program/\",\r\n    \"linkCategory\": \"ARTICLE\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1285,7 +1326,8 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/links",
+					"raw": "http://localhost:8080/api/links",
+					"protocol": "http",
 					"host": [
 						"localhost"
 					],
@@ -1392,6 +1434,16 @@
 		{
 			"name": "Create advice for test",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkamF2aXN0ZGV2QG1haWwucnUiLCJyb2xlIjpbIkFETUlOIl0sImlkIjoxLCJleHAiOjE2NzE3MTQ4MDksImlhdCI6MTY3MTExMDAwOSwidXNlcm5hbWUiOiJkamF2aXN0ZGV2QG1haWwucnUifQ.qYPiJvladDg5sh_s260VWK8WDZFpmIC7niD4nEmbRC41BurQ-pWEnlZQPnndCHzYbyqPu70ROGN6ziOMQE4J8w",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -1404,7 +1456,8 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/admin/advice",
+					"raw": "http://localhost:8080/api/admin/advice",
+					"protocol": "http",
 					"host": [
 						"localhost"
 					],
@@ -1513,11 +1566,21 @@
 		{
 			"name": "Update course",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkamF2aXN0ZGV2QG1haWwucnUiLCJyb2xlIjpbIkFETUlOIl0sImlkIjoxLCJleHAiOjE2NzE3MzA4MDQsImlhdCI6MTY3MTEyNjAwNCwidXNlcm5hbWUiOiJkamF2aXN0ZGV2QG1haWwucnUifQ.eCmVDrjELdtrUxRtwnt4K3ViB7ZgqTw_WDP8tg99eDIWtacGCV7IBqTg1F8QXGw_U4ZgqH8SGHysFE9A3u_IfQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"Managing Emotions in Times of Uncertainty & Stress\",\r\n    \"description\": \"Developed by the Yale Center for Emotional Intelligence, Managing Emotions in Times of Uncertainty & Stress will provide participants with the knowledge, skills, and strategies to understand and manage their emotions and those of their students. The 10-hour online course is designed for school staff, including teachers, paraprofessionals, counselors, principals, and non-teaching staff in preK-12 schools.\",\r\n    \"price\": 360.00,\r\n    \"imageUrl\": \"some/url/here\"\r\n}",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"Managing Emotion in Times of Uncertainty & Stress\",\r\n    \"description\": \"Developed by the Yale Center for Emotional Intelligence, Managing Emotions in Times of Uncertainty & Stress will provide participants with the knowledge, skills, and strategies to understand and manage their emotions and those of their students. The 10-hour online course is designed for school staff, including teachers, paraprofessionals, counselors, principals, and non-teaching staff in preK-12 schools.\",\r\n    \"price\": 360.00,\r\n    \"imageUrl\": \"some/url/here\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1634,6 +1697,16 @@
 		{
 			"name": "Create course",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkamF2aXN0ZGV2QG1haWwucnUiLCJyb2xlIjpbIkFETUlOIl0sImlkIjoxLCJleHAiOjE2NzE3MzA4MDQsImlhdCI6MTY3MTEyNjAwNCwidXNlcm5hbWUiOiJkamF2aXN0ZGV2QG1haWwucnUifQ.eCmVDrjELdtrUxRtwnt4K3ViB7ZgqTw_WDP8tg99eDIWtacGCV7IBqTg1F8QXGw_U4ZgqH8SGHysFE9A3u_IfQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -1963,6 +2036,16 @@
 		{
 			"name": "Delete course by ID",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkamF2aXN0ZGV2QG1haWwucnUiLCJyb2xlIjpbIkFETUlOIl0sImlkIjoxLCJleHAiOjE2NzE3NDMwMDAsImlhdCI6MTY3MTEzODIwMCwidXNlcm5hbWUiOiJkamF2aXN0ZGV2QG1haWwucnUifQ.2rdBnGVKlNA5p1u5A-6m2Kl1GbcsgGQGyESS02XVszcx5C2pzVDiOeDAzNvYvZYFU2of7yZiBK5djajJHxwfPw",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
@@ -2532,6 +2615,16 @@
 		{
 			"name": "Delete psychologist",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkamF2aXN0ZGV2QG1haWwucnUiLCJyb2xlIjpbIkFETUlOIl0sImlkIjoxLCJleHAiOjE2NzE3NDU5MzEsImlhdCI6MTY3MTE0MTEzMSwidXNlcm5hbWUiOiJkamF2aXN0ZGV2QG1haWwucnUifQ.sUeMxzIUaE6GFjQCfJ3LV7EBmO49UgJ55mz3UWv90PCgzD4f5GA6_r7Jm2WaA4ivVzFhbnQkdgrL3uDv_B0xqw",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
@@ -2878,6 +2971,16 @@
 		{
 			"name": "Get all test types",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIkFETUlOIl0sImV4cCI6MTY3MDk4MzIwMiwiaWF0IjoxNjcwODk2ODAyLCJ1c2VybmFtZSI6ImRqYXZpc3RkZXZAbWFpbC5ydSJ9.uB1YNDpNRgqLek8jwFDZdjcQqsEvhssWLP-EglotAQCkjjHYYdJ9Ip_prdmPdIL8rabSPDZ0apZ7sr2kpEpZxg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -2973,6 +3076,614 @@
 					],
 					"cookie": [],
 					"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Mental\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Health\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Delete advice",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkamF2aXN0ZGV2QG1haWwucnUiLCJyb2xlIjpbIkFETUlOIl0sImlkIjoxLCJleHAiOjE2NzE3MjY0MDksImlhdCI6MTY3MTEyMTYwOSwidXNlcm5hbWUiOiJkamF2aXN0ZGV2QG1haWwucnUifQ.p-yWqCybWRJuKZdEH055MWU9yqQ4986lYFuJ8yg9XeZcCIyJVmWdtBvVa8T4FG_PORiZTvDP-PlDeirN_wFF2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/advice/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"advice",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response Delete advice",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/advice/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"advice",
+								"1"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Dec 2022 16:31:24 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Delete advice-link",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkamF2aXN0ZGV2QG1haWwucnUiLCJyb2xlIjpbIkFETUlOIl0sImlkIjoxLCJleHAiOjE2NzE3MjY0MDksImlhdCI6MTY3MTEyMTYwOSwidXNlcm5hbWUiOiJkamF2aXN0ZGV2QG1haWwucnUifQ.p-yWqCybWRJuKZdEH055MWU9yqQ4986lYFuJ8yg9XeZcCIyJVmWdtBvVa8T4FG_PORiZTvDP-PlDeirN_wFF2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/admin/advice-link/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"admin",
+						"advice-link",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response Delete advice-link",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/advice-link/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"advice-link",
+								"1"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Dec 2022 16:29:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Update advice",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkamF2aXN0ZGV2QG1haWwucnUiLCJyb2xlIjpbIkFETUlOIl0sImlkIjoxLCJleHAiOjE2NzE3MjkxOTYsImlhdCI6MTY3MTEyNDM5NiwidXNlcm5hbWUiOiJkamF2aXN0ZGV2QG1haWwucnUifQ.71IiP3Y3UZfS1HjnTfYYIhRKIzq9iANNButL64I9dNJsei5qAd3Qk_krA8q-Hp5KHlFA3cFa85fEKJ-LEgyT4A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"Keep calm and study hard\",\r\n    \"scoreFrom\": 80,\r\n    \"scoreTo\": 100,\r\n    \"testId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/advice/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"advice",
+						"update"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response Update advice",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"Keep calm and study hard\",\r\n    \"scoreFrom\": 30,\r\n    \"scoreTo\": 50,\r\n    \"testId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/advice/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"advice",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Dec 2022 17:14:33 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"Keep calm and study hard\",\n    \"scoreFrom\": 30,\n    \"scoreTo\": 50,\n    \"test\": {\n        \"id\": 2,\n        \"title\": \"Test3 for mental\",\n        \"testType\": {\n            \"id\": 1,\n            \"title\": \"Health\"\n        },\n        \"description\": \"Some details for new test\",\n        \"imageUrl\": \"http/url/here\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all advice",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkamF2aXN0ZGV2QG1haWwucnUiLCJyb2xlIjpbIkFETUlOIl0sImlkIjoxLCJleHAiOjE2NzE3NjY3MDMsImlhdCI6MTY3MTE2MTkwMywidXNlcm5hbWUiOiJkamF2aXN0ZGV2QG1haWwucnUifQ.K4nrccpegQoDDpKChe0xyI1u8cnnOmj2R2VAsrgK5TA3qQkk6OX-6yOgAPAE1VnE_O3lDaUzrhGf20NfBfnVSg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/advice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"advice"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response Get all advice",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/advice",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"advice"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Dec 2022 03:38:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"title\": \"Keep calm and study hard\",\n        \"scoreFrom\": 30,\n        \"scoreTo\": 50,\n        \"test\": {\n            \"id\": 2,\n            \"title\": \"Test3 for mental\",\n            \"testType\": {\n                \"id\": 1,\n                \"title\": \"Health\"\n            },\n            \"description\": \"Some details for new test\",\n            \"imageUrl\": \"http/url/here\"\n        }\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Keep calm and study hard\",\n        \"scoreFrom\": 0,\n        \"scoreTo\": 29,\n        \"test\": {\n            \"id\": 2,\n            \"title\": \"Test3 for mental\",\n            \"testType\": {\n                \"id\": 1,\n                \"title\": \"Health\"\n            },\n            \"description\": \"Some details for new test\",\n            \"imageUrl\": \"http/url/here\"\n        }\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Keep calm and study hard\",\n        \"scoreFrom\": 0,\n        \"scoreTo\": 29,\n        \"test\": {\n            \"id\": 1,\n            \"title\": \"Test3 for mental\",\n            \"testType\": {\n                \"id\": 1,\n                \"title\": \"Health\"\n            },\n            \"description\": \"Some details for new test\",\n            \"imageUrl\": \"http/url/here\"\n        }\n    },\n    {\n        \"id\": 1,\n        \"title\": \"Keep calm and study hard\",\n        \"scoreFrom\": 30,\n        \"scoreTo\": 100,\n        \"test\": {\n            \"id\": 1,\n            \"title\": \"Test3 for mental\",\n            \"testType\": {\n                \"id\": 1,\n                \"title\": \"Health\"\n            },\n            \"description\": \"Some details for new test\",\n            \"imageUrl\": \"http/url/here\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get all advice by testId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkamF2aXN0ZGV2QG1haWwucnUiLCJyb2xlIjpbIkFETUlOIl0sImlkIjoxLCJleHAiOjE2NzE3NjY3MDMsImlhdCI6MTY3MTE2MTkwMywidXNlcm5hbWUiOiJkamF2aXN0ZGV2QG1haWwucnUifQ.K4nrccpegQoDDpKChe0xyI1u8cnnOmj2R2VAsrgK5TA3qQkk6OX-6yOgAPAE1VnE_O3lDaUzrhGf20NfBfnVSg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/advice/testId?testId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"advice",
+						"testId"
+					],
+					"query": [
+						{
+							"key": "testId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response Get all advice by testId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/advice/testId?testId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"advice",
+								"testId"
+							],
+							"query": [
+								{
+									"key": "testId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Dec 2022 03:39:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 5,\n        \"title\": \"Keep calm and study hard\",\n        \"scoreFrom\": 0,\n        \"scoreTo\": 29,\n        \"test\": {\n            \"id\": 1,\n            \"title\": \"Test3 for mental\",\n            \"testType\": {\n                \"id\": 1,\n                \"title\": \"Health\"\n            },\n            \"description\": \"Some details for new test\",\n            \"imageUrl\": \"http/url/here\"\n        }\n    },\n    {\n        \"id\": 1,\n        \"title\": \"Keep calm and study hard\",\n        \"scoreFrom\": 30,\n        \"scoreTo\": 100,\n        \"test\": {\n            \"id\": 1,\n            \"title\": \"Test3 for mental\",\n            \"testType\": {\n                \"id\": 1,\n                \"title\": \"Health\"\n            },\n            \"description\": \"Some details for new test\",\n            \"imageUrl\": \"http/url/here\"\n        }\n    }\n]"
 				}
 			]
 		}

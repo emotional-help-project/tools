@@ -760,6 +760,16 @@
 		{
 			"name": "Start a new test",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlVTRVIiXSwiZXhwIjoxNjcwOTk4NDA0LCJpYXQiOjE2NzA5MTIwMDQsInVzZXJuYW1lIjoic29maWlhLnByeWRhdGtvQGdtYWlsLmNvbSJ9.pDhkitj45Nkg_8b-i33fDOnMQ63RN4bFT3_QAOkxQeXl7_XgIxOuR1icsAgB59XVlIqq6ZC7JX8kriExnRlL7g",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"url": {
@@ -880,9 +890,26 @@
 		},
 		{
 			"name": "Get tests page by user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlVTRVIiXSwiZXhwIjoxNjcwOTg0NjY5LCJpYXQiOjE2NzA4OTgyNjksInVzZXJuYW1lIjoic29maWlhLnByeWRhdGtvQGdtYWlsLmNvbSJ9.lGD7NS0506OVvjkXo_R1HYEAYS9T-xyk2qjKwZOifiOMsbbG8l2VeRl6mjUjq8VhepaSqYLh-mctzLGIZhAWEA",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://localhost:8080/api/tests/user/1?skip=0&take=10",
 					"protocol": "http",
@@ -2675,11 +2702,21 @@
 		{
 			"name": "Update user password",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlVTRVIiXSwiZXhwIjoxNjcwOTg0NjY5LCJpYXQiOjE2NzA4OTgyNjksInVzZXJuYW1lIjoic29maWlhLnByeWRhdGtvQGdtYWlsLmNvbSJ9.lGD7NS0506OVvjkXo_R1HYEAYS9T-xyk2qjKwZOifiOMsbbG8l2VeRl6mjUjq8VhepaSqYLh-mctzLGIZhAWEA",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"userId\": 1,\r\n    \"newPassword\": \"Aaad67123!\"\r\n}",
+					"raw": "{\r\n    \"userId\": 2,\r\n    \"newPassword\": \"Aaad67123!\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
